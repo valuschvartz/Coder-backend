@@ -37,6 +37,7 @@ cd coderhouse-backend-III
 
 2. Crear la imagen Docker
 
+```bash
 docker build -t valuschvartz/miapp-node .
 
 3. Ejecutar el contenedor
@@ -47,9 +48,7 @@ docker run --env-file .env -p 8080:8080 valuschvartz/miapp-node
 	•	API base: http://localhost:8080
 	•	Documentación Swagger: http://localhost:8080/docs
 
-⸻
-
-📋 Requisitos previos
+    📋 Requisitos previos
 	•	Tener instalado Docker.
 	•	Tener una URI válida de MongoDB (por ejemplo, en MongoDB Atlas).
 
@@ -58,7 +57,6 @@ docker run --env-file .env -p 8080:8080 valuschvartz/miapp-node
 ⚙️ Variables de entorno
 
 Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
-
 PORT=8080
 MONGO_URL=mongodb://localhost:27017/mocksDB
 JWT_SECRET=coder123
@@ -69,10 +67,10 @@ El proyecto incluye testing automático con Mocha, Chai y Supertest.
 
 Instalar dependencias:
 npm install
+Ejecutar tests:
 npm test
 
 📁 Estructura del proyecto
-
 coderhouse-backend-III/
 ├── src/
 │   ├── controllers/
@@ -91,18 +89,15 @@ coderhouse-backend-III/
 ├── package.json
 └── README.md
 
+
 📦 Imagen Docker publicada
 
-La imagen Docker del proyecto ha sido subida a Docker Hub y está disponible públicamente:
-docker push valuschvartz/miapp-node:latest
+La imagen Docker del proyecto ha sido subida a Docker Hub y está disponible públicamente.
+	•	Para descargarla y usarla directamente desde Docker Hub:
+    docker pull valuschvartz/miapp-node:latest
 
-Podés descargarla y usarla directamente desde Docker Hub:
-docker pull valuschvartz/miapp-node:latest
-
-Link directo a la imagen en Docker Hub:
+    	Link directo a la imagen en Docker Hub:
 https://hub.docker.com/r/valuschvartz/miapp-node
-
-⸻
 
 ✨ Autor
 
